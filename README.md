@@ -25,7 +25,7 @@ For directory indexes, use the filename index. It will always take precedence. F
 
 #### Standard Ones
 	* Markdown (md)
-	* HTML (html)
+	* HTML (htm) - May only include the <body> content
 
 #### Special ones
 	* 301 Redirects (r301): Redirect pages via a 301. The url to redirect to should be put directly inside the file. 
@@ -34,7 +34,8 @@ For directory indexes, use the filename index. It will always take precedence. F
 ### Static File Types
 * png
 * jpg
-* ico
+* jpg
+* html - HTML without headers
 
 ### YARCMS Config files
 
