@@ -55,6 +55,43 @@
 		return abspath($a) == abspath($b); 
 	}
 
+	function common_levels($a, $b, $seperator = "/"){
+		$a = splitpath($a, $seperator); 
+		$b = splitpath($b, $seperator); 
+
+		$i = 0; 
+
+		while(count($a) > 0 && count($b) > 0 && array_pop($a) == array_pop($b)){
+			$i++;
+		}
+
+		return $i; 
+	}
+
+	function relpath($from, $to, $seperator = "/"){
+		common_levels($from, $to); 
+
+		$a = splitpath($from, $seperator); 
+		$b = splitpath($to, $seperator); 
+
+		$i = common_levels($from, $to, $seperator); 
+
+		for($j = 0;$j < $i; $j++){
+			array_pop($a); 
+			array_pop($b); 
+		}
+
+		$path = ""; 
+
+		for($j = 0;$j < count($a);$j++){
+			$path .= ".." . $seperator; 
+		}
+
+		$path .= implode($seperator, $b); 
+
+		return $path; 
+	}
+
 	function getFirstHeading($text) {
 	    $html = str_get_html($text);
 

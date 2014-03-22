@@ -40,7 +40,14 @@
 		$YARCMS_contentProperties = array(); 
 	}
 
+	if(@$YARCMS_config["index"] and $YARCMS_IndexPath){
+		$YARCMS_pageId = abspath($YARCMS_IndexPath . "/../" . $YARCMS_config["index"]);
+		include dirname(__file__) . "/02_paths.php"; 
+	}
+
 	if(!is_dir($YARCMS_templateDir . $YARCMS_template)){
 		die("Missing template: " . $YARCMS_template); 
 	}
+
+	$YARCMS_template_path = abspath("/" . $YARCMS_templateServe . $YARCMS_template, "/", true); 
 ?>

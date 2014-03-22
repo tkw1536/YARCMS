@@ -51,7 +51,8 @@ In each content directory, the .yarcms file can be used to customize the menu an
 	"properties": {
 		"lang": "en"
 	}, 
-	"template": "basic"
+	"template": "basic", 
+	"index": "index.html"
 }
 ```
 
@@ -61,6 +62,8 @@ The menu will be built automatically.
 The template property determines the template to be used. 
 
 In case a directory does not have this file, the template will check in the parent directory. 
+
+The index property, if set, determines which index file to use. This must be relative to the current .yarcms file. 
 
 ## License
 (c) Tom Wiesing 2014
