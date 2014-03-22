@@ -1,0 +1,15 @@
+#
+# YARSCMS
+#
+
+RewriteEngine on
+
+# Rewrite everything to index.php except it exists
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]
+
+# Errors
+ErrorDocument 404 /index.php
+ErrorDocument 401 /index.php
+ErrorDocument 403 /index.php
+ErrorDocument 500 /index.php
