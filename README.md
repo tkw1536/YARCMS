@@ -4,8 +4,20 @@ Yet another really (simple) CMS.
 
 ## Dependencies
 
-* PHP 5.3 or newer
-* Apache with mod_rewrite and mod_auth
+Supports Apache or nginx. 
+
+### Apache
+	* PHP 5.3 or newer with JSON extension
+	* mod_rewrite and mod_auth enabled
+
+## Nginx
+	* PHP 5.3 or newer with JSON extension
+	* access to your servers config files
+
+## Installation
+	* For apache: Make sure all dependencies are installed and then simply put all files in the directory root. 
+	* For Nginx:  Install all dependencies then adapt and use nginx.cfg as a configuration.  
+
 
 ## How it works
 

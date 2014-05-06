@@ -1,5 +1,5 @@
 #
-# YARSCMS
+# YARSCMS (Apache)
 #
 
 RewriteEngine on
@@ -13,3 +13,8 @@ ErrorDocument 404 /index.php
 ErrorDocument 401 /index.php
 ErrorDocument 403 /index.php
 ErrorDocument 500 /index.php
+
+# Deny access to nginx config file
+<files nginx.cfg>
+	deny from all
+</files>
